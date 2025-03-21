@@ -74,3 +74,7 @@ SELECT * FROM students WHERE country IN('USA','UK');
 SELECT * FROM students WHERE country NOT IN('USA','UK');
 
 SELECT * FROM students WHERE age BETWEEN 20 AND 25 ORDER BY age ASC;
+
+SELECT * FROM students WHERE first_name LIKE '__a%';
+
+SELECT * FROM students WHERE first_name ILIKE 'a%';
