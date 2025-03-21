@@ -17,3 +17,12 @@ ALTER TABLE person ALTER COLUMN user_age SET NOT NULL;
 
 -- remove const
 ALTER TABLE person ALTER COLUMN user_age DROP NOT NULL;
+
+-- set unique
+ALTER TABLE person ADD CONSTRAINT unique_person_user_age UNIQUE(user_age);
+
+-- Drop unique
+ALTER TABLE person DROP CONSTRAINT unique_person_user_age;
+
+-- Removeing table all data
+TRUNCATE TABLE person;
