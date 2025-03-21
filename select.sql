@@ -65,3 +65,12 @@ SELECT * FROM students WHERE email IS NULL;
 SELECT email FROM students;
 
 SELECT COALESCE(email,'Email not provided') as Email FROM students;
+
+SELECT * FROM students WHERE country = 'USA' or country = 'India' or country = 'Uk';
+
+
+SELECT * FROM students WHERE country IN('USA','UK');
+
+SELECT * FROM students WHERE country NOT IN('USA','UK');
+
+SELECT * FROM students WHERE age BETWEEN 20 AND 25 ORDER BY age ASC;
