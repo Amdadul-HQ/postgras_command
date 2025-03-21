@@ -101,3 +101,7 @@ SELECT * FROM students LIMIT 2 OFFSET 2 * 1; --page two
 DELETE FROM students WHERE grade = 'C';
 
 SELECT * FROM students;
+
+UPDATE students
+    SET email = 'emma@gmail.com'
+    WHERE student_id = 2;
