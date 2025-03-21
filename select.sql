@@ -53,4 +53,15 @@ SELECT * FROM students grade WHERE grade = 'A' AND course = 'Physics';
 
 SELECT * FROM students WHERE blood_group = 'A+';
 
-SELECT * FROM students WHERE country = 'USA' OR country = 'India';
+SELECT * FROM students WHERE( country = 'USA' OR country = 'India') AND age >= 21;
+
+SELECT * FROM students WHERE age > 20 AND course = '';
+
+-- capitalize column data
+SELECT upper(first_name) as first_name_in_upper_case, * FROM students;
+
+SELECT * FROM students WHERE email IS NULL;
+
+SELECT email FROM students;
+
+SELECT COALESCE(email,'Email not provided') as Email FROM students;
