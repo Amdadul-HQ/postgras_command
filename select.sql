@@ -78,3 +78,26 @@ SELECT * FROM students WHERE age BETWEEN 20 AND 25 ORDER BY age ASC;
 SELECT * FROM students WHERE first_name LIKE '__a%';
 
 SELECT * FROM students WHERE first_name ILIKE 'a%';
+
+-- pagenation
+LIMIT OFFSET
+
+-- Limit 
+SELECT * FROM students LIMIT 2;
+
+
+SELECT * FROM students;
+-- OFfset
+SELECT * FROM students LIMIT 5 OFFSET 2;
+
+-- pagenation concept
+
+SELECT * FROM students LIMIT 2 OFFSET 2 * 0; --page one
+
+SELECT * FROM students LIMIT 2 OFFSET 2 * 1; --page two
+
+-- Delete 
+
+DELETE FROM students WHERE grade = 'C';
+
+SELECT * FROM students;
