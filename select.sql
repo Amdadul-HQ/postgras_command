@@ -26,3 +26,31 @@ VALUES
 ('Olivia', 'Garcia', 22, 'B', 'Mathematics', 'olivia.garcia@example.com', '2002-03-08', 'A-', 'Brazil');
 
 SELECT * FROM students;
+
+-- single column values
+SELECT email FROM students;
+
+-- Rename the column name as get all data
+SELECT email as "Student Email" FROM students;
+
+
+-- Data sorting
+SELECT * FROM students ORDER BY first_name ASC;
+
+-- sorting by age
+SELECT * FROM students ORDER BY age ASC;
+
+
+-- soring by cuntry
+SELECT country FROM students ORDER BY country ASC;
+
+SELECT DISTINCT blood_group FROM students;
+
+-- Data sorting by value
+SELECT * FROM students country WHERE country ='USA';
+
+SELECT * FROM students grade WHERE grade = 'A' AND course = 'Physics';
+
+SELECT * FROM students WHERE blood_group = 'A+';
+
+SELECT * FROM students WHERE country = 'USA' OR country = 'India';
