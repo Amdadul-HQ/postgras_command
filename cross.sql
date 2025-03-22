@@ -24,6 +24,9 @@ SELECT * FROM employess CROSS JOIN departments;
 -- NATURAL JOIN
 SELECT * FROM employess NATURAL JOIN departments;
 
+DROP TABLE departments;
+DROP TABLE employess;
+
 
 -- Inner Join
 SELECT emp_name,dept_name FROM employess JOIN departments ON departments.dept_id = employess.dept_id;
