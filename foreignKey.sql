@@ -21,6 +21,8 @@ SELECT * FROM "user";
 
 INSERT INTO post (title,user_id) VALUES ('Enjoying a sunny day with AKASH',1),('BATASH just shared an amazing recipe!',2),('Exploring adventures with SAGOR',3),('NODI''s wisdom always leaves me inspired',4);
 
+INSERT INTO post (title) VALUES('Hello');
+INSERT INTO "user" (username) VALUES('RIMON');
 
 SELECT * FROM post;
 
@@ -54,8 +56,14 @@ DELETE FROM "user" WHERE id = 4;
 
 -- Retrieve all post title with their username
 
+-- Inner Join
 SELECT title, username FROM post JOIN "user" ON post.user_id = "user".id;
 
 
+-- Left Join
+SELECT title, username FROM post LEFT JOIN "user" ON post.user_id = "user".id;
+
+-- Right Josin
+SELECT title, username FROM post RIGHT JOIN "user" ON post.user_id = "user".id;
 
 
