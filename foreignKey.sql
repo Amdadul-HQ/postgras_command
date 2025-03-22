@@ -52,5 +52,10 @@ DELETE FROM "user" WHERE id = 4;
 --     user_id INTEGER REFERENCES "user"(id) ON DELETE SET DEFAULT DEFAULT 2
 -- );
 
+-- Retrieve all post title with their username
+
+SELECT title, username FROM post JOIN "user" ON post.user_id = "user".id;
+
+
 
 
