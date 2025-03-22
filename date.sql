@@ -25,3 +25,7 @@ SELECT age(CURRENT_DATE, '1996-07-29');
 SELECT * FROM students;
 
 SELECT * ,age(CURRENT_DATE,dob) FROM students;
+
+SELECT extract(year,'2024-01-25');
+
+SELECT extract(MONTH FROM '2024-01-25'::DATE);
