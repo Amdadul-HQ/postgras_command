@@ -78,18 +78,16 @@ CREATE TABLE orders (
 );
 
 INSERT INTO orders (customer_id, order_date, total_amount) VALUES
-(101, '2024-03-01', 250.75),
-(102, '2024-03-02', 150.50),
-(103, '2024-03-03', 320.00),
-(104, '2024-03-04', 450.25),
-(105, '2024-03-05', 120.99),
-(106, '2024-03-06', 580.30),
-(107, '2024-03-07', 99.99),
-(108, '2024-03-08', 675.60),
-(109, '2024-03-09', 89.50),
-(110, '2024-03-10', 499.99);
+(110, '2022-04-10', 1000.99);
 
 SELECT * FROM orders;
 
-
 -- Finde customer who have place more the w orders and calculate the total amoun spent by each of these customers;
+SELECT customer_id,count(*),sum(total_amount) as total_spand FROM orders GROUP BY customer_id HAVING count(order_id)>2;
+
+
+-- Find the total amount of orders placed each month in the year 2024
+SELECT extract(MONTH FROM order_date) as month,sum(total_amount) as total_revenue FROM orders WHERE extract(YEAR FROM order_date) = 2024
+GROUP BY MONTH;
+
+
