@@ -66,4 +66,7 @@ SELECT title, username FROM post LEFT JOIN "user" ON post.user_id = "user".id;
 -- Right Josin
 SELECT title, username FROM post RIGHT JOIN "user" ON post.user_id = "user".id;
 
+-- Full Join
+SELECT title, username FROM post FUll JOIN "user" ON post.user_id = "user".id;
+
 
