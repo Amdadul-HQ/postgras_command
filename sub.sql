@@ -47,3 +47,4 @@ SELECT department_name,count(*),sum(salary) FROM employess GROUP BY department_n
 
 SELECT * FROM (SELECT department_name,sum(salary) FROM employess GROUP BY department_name) as sum_dept_salary;
 
+
