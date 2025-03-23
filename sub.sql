@@ -40,3 +40,10 @@ INSERT INTO employess (employee_name, department_name, salary, hire_date) VALUES
 ('Deborah Perez', 'QUALITY ASSURANCE', 59000.00, '2021-10-25');
 
 SELECT * FROM employess;
+
+SELECT * FROM employess WHERE salary > (SELECT max(salary) FROM employess WHERE department_name = 'HR');
+
+SELECT department_name,count(*),sum(salary) FROM employess GROUP BY department_name;
+
+SELECT * FROM (SELECT department_name,sum(salary) FROM employess GROUP BY department_name) as sum_dept_salary;
+
